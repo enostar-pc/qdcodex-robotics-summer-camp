@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-[#0a0814] text-white font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f0c29;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #6366f1;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply w-full max-w-md mx-auto px-4 sm:max-w-xl md:max-w-3xl lg:max-w-5xl;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white text-base
+           bg-gradient-to-r from-indigo-500 to-purple-600
+           shadow-glow hover:shadow-glow-lg
+           active:scale-95 transition-all duration-200
+           min-h-[52px] touch-manipulation;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-indigo-300 text-base
+           border border-indigo-500/40 bg-white/5 backdrop-blur-sm
+           hover:bg-indigo-500/10 hover:border-indigo-400
+           active:scale-95 transition-all duration-200
+           min-h-[52px] touch-manipulation;
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase
+           bg-indigo-500/20 border border-indigo-500/30 text-indigo-300;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl font-display font-bold leading-tight;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30
+           focus:outline-none focus:border-indigo-500 focus:bg-white/[0.1]
+           transition-all duration-200 text-base min-h-[52px];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glow-border {
+    box-shadow: inset 0 0 0 1px rgba(99,102,241,0.4);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
