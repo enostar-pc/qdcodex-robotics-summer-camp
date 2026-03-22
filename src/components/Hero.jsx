@@ -164,7 +164,7 @@ export default function Hero() {
             className="btn-primary text-base sm:text-lg animate-pulse-glow"
             id="hero-enroll-btn"
           >
-            🚀 Enroll Now – ₹3999+GST
+            🚀 Enroll Now – ₹3999 + GST
           </a>
           <a
             href="#curriculum"
