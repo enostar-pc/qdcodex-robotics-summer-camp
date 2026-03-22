@@ -92,7 +92,7 @@ export default function Pricing() {
                 className="btn-primary w-full text-base sm:text-lg animate-pulse-glow"
                 id="pricing-enroll-btn"
               >
-                🚀 Enroll Now for ₹3999
+                🚀 Enroll Now for ₹3999 + GST
               </a>
 
               <p className="text-center text-white/30 text-xs mt-3">
